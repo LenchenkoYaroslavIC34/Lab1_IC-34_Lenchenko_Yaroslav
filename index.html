@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Лабораторна робота №1</title>
+</head>
+<body>
+
+    <h1>Лабораторна робота №1</h1>
+
+    <h2>Тема</h2>
+    <p>Структура HTML-документа. Вибір предметної галузі. Робота з посиланнями, таблицями, зображеннями, списками в HTML-документі.</p>
+
+    <h2>Мета</h2>
+    <p>Придбати практичні навички роботи з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт.</p>
+
+    <h2>Опис предметної галузі</h2>
+    <p><strong>Сайт тендерів:</strong> Веб-додаток надає можливість користувачам переглядати активні тендери, шукати потрібні за допомогою ключових слів, подавати пропозиції, а також створювати власні тендери.</p>
+
+    <h2>Структура головної сторінки</h2>
+    <p>На головній сторінці розміщено зображення, таблиця тендерів, списки функцій, посилання на інші сторінки та форму для пошуку тендерів.</p>
+
+    <h3>Зображення</h3>
+    <div class="code-section">
+        <code>&lt;img src="images/tender.jpg" alt="Тендери" /&gt;</code>
+    </div>
+    <p>Теорія: Тег <code>&lt;img&gt;</code> використовується для вставлення зображень на сторінку. Основні атрибути:</p>
+    <ul>
+        <li><code>src</code> – шлях до зображення.</li>
+        <li><code>alt</code> – альтернативний текст при відсутності зображення.</li>
+    </ul>
+    <img src="https://via.placeholder.com/600x300" alt="Тендери">
+
+    <h3>Таблиця тендерів</h3>
+    <div class="code-section">
+        <code>
+        &lt;table&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;&lt;th&gt;Номер тендеру&lt;/th&gt;&lt;th&gt;Опис&lt;/th&gt;&lt;th&gt;Стан&lt;/th&gt;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;001&lt;/td&gt;&lt;td&gt;Будівництво дороги&lt;/td&gt;&lt;td&gt;Активний&lt;/td&gt;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;002&lt;/td&gt;&lt;td&gt;Закупівля обладнання&lt;/td&gt;&lt;td&gt;Завершений&lt;/td&gt;&lt;/tr&gt;<br>
+        &lt;/table&gt;
+        </code>
+    </div>
+    <p>Теорія: Теги для створення таблиць:</p>
+    <ul>
+        <li><code>&lt;table&gt;</code> – огортає таблицю.</li>
+        <li><code>&lt;tr&gt;</code> – рядок таблиці.</li>
+        <li><code>&lt;th&gt;</code> – заголовок стовпця.</li>
+        <li><code>&lt;td&gt;</code> – комірка таблиці.</li>
+    </ul>
+    <table>
+        <tr>
+            <th>Номер тендеру</th>
+            <th>Опис</th>
+            <th>Стан</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Будівництво дороги</td>
+            <td>Активний</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Закупівля обладнання</td>
+            <td>Завершений</td>
+        </tr>
+    </table>
+
+    <h3>Списки</h3>
+    <div class="code-section">
+        <code>
+        &lt;ul&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Перегляд тендерів&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Пошук тендерів&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Подання пропозицій&lt;/li&gt;<br>
+        &lt;/ul&gt;<br><br>
+
+        &lt;ol&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Створення тендеру&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Управління тендером&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Завершення тендеру&lt;/li&gt;<br>
+        &lt;/ol&gt;
+        </code>
+    </div>
+    <p>Теорія: Для створення списків використовуються теги <code>&lt;ul&gt;</code> (ненумерований список) та <code>&lt;ol&gt;</code> (нумерований список). Тег <code>&lt;li&gt;</code> позначає елемент списку.</p>
+    <ul>
+        <li>Перегляд тендерів</li>
+        <li>Пошук тендерів</li>
+        <li>Подання пропозицій</li>
+    </ul>
+    <ol>
+        <li>Створення тендеру</li>
+        <li>Управління тендером</li>
+        <li>Завершення тендеру</li>
+    </ol>
+
+    <h3>Форма пошуку тендерів</h3>
+    <div class="code-section">
+        <code>
+        &lt;form action="/search" method="get"&gt;<br>
+        &nbsp;&nbsp;&lt;input type="text" name="query" placeholder="Введіть ключові слова" /&gt;<br>
+        &nbsp;&nbsp;&lt;button type="submit"&gt;Пошук&lt;/button&gt;<br>
+        &lt;/form&gt;
+        </code>
+    </div>
+    <form action="/search" method="get">
+        <input type="text" name="query" placeholder="Введіть ключові слова">
+        <button type="submit">Пошук</button>
+    </form>
+
+    <h3>Посилання</h3>
+    <div class="code-section">
+        <code>&lt;a href="about.html"&gt;Опис предметної галузі&lt;/a&gt;</code>
+    </div>
+    <p>Теорія: Тег <code>&lt;a&gt;</code> використовується для створення посилань. Основний атрибут – <code>href</code>, який містить адресу сторінки.</p>
+    <a href="about.html">Опис предметної галузі</a>
+
+    <h2>Висновки</h2>
+    <p>Під час виконання лабораторної роботи я навчився створювати HTML-документ, використовувати зображення, таблиці, списки та посилання. Також навчився працювати з формами та атрибутами тегів. Веб-додаток для роботи з тендерами дозволяє користувачам зручно управляти тендерами, використовуючи всі надані функції.</p>
+
+</body>
+</html>
